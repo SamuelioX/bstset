@@ -9,7 +9,7 @@
  */
 public class BSTSet implements StringSet_Check
 {
-    private Node root;
+    Node root;
     /**
      * Constructor for objects of class BSTSet
      */
@@ -473,15 +473,23 @@ public class BSTSet implements StringSet_Check
         g.add("24");
         g.add("27");
         g.add("32");
+        //15, 13, 11, 21, 17, 18, 35, 24, 27, 32
+        System.out.println(g.toStringPreOrder());
         //11, 13, 15, 17, 18, 21, 24, 27, 32, 35
         System.out.println(g.toStringInOrder());
         g.remove("18");
-        //11, 13, 15, 17, 21, 24 27, 32 35
+        //15, 13, 11, 21, 17, 35, 24, 27, 32
+        System.out.println(g.toStringPreOrder());
+        //11, 13, 15, 17, 21, 24, 27, 32, 35
         System.out.println(g.toStringInOrder());
         g.remove("27");
-        //11, 13, 15, 17, 21 24 32, 35
+        //15, 13, 11, 21, 17, 35, 24, 32
+        System.out.println(g.toStringPreOrder());
+        //11, 13, 15, 17, 21, 24, 32, 35
         System.out.println(g.toStringInOrder());
         g.remove("21");
+        //15, 13, 11,  24, 17, 35, 32
+        System.out.println(g.toStringPreOrder());
         //11, 13, 15, 17, 24, 32, 35
         System.out.println(g.toStringInOrder());
     }
